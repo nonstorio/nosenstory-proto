@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ns;
+
+// NS Management service
+service Mgmt {
+  // Set prefix on Home
+  rpc SetPrefix (SetPrefixRequest) returns (Empty);
+}
+
+message Empty {}
+
+// Request for prefix change
+message SetPrefixRequest {
+  string prefix = 1;
+}
